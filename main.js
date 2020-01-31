@@ -1,10 +1,27 @@
 const patterns = [
-    "IN",
-    "OUT",
-    "POST",
-    "CORNER",
-    "FLY"
+    {
+        pattern: "IN",
+        sound: "in.mp3"
+    },
+    {
+        pattern: "OUT",
+        sound: "out.mp3"
+    },
+    {
+        pattern: "POST",
+        sound: "post.mp3"
+    },
+    {
+        pattern: "CORNER",
+        sound: "corner.mp3"
+    },
+    {
+        pattern: "FLY",
+        sound: "fly.mp3"
+    }
 ]
+
+
 var previousRoute = "";
 var cntue = true;
 
@@ -23,10 +40,12 @@ function stop() {
 
 function drawNewPattern() {
     if (cntue) {
-        
+
         var newRoute = patterns[parseInt(Math.random() * 5)];
-        
-        document.getElementById("routeElement").innerText = newRoute;
+
+        document.getElementById("routeElement").innerText = newRoute.pattern;
+        var audioElement = new Audio('sounds/' + newRoute.sound);
+        audioElement.play();
     }
 }
 var countDownDate = new Date();
