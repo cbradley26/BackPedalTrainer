@@ -1,23 +1,23 @@
 const patterns = [
     {
         pattern: "IN",
-        sound: "in.mp3"
+        sound: new Audio("sounds/in.mp3")
     },
     {
         pattern: "OUT",
-        sound: "out.mp3"
+        sound: new Audio("sounds/out.mp3")
     },
     {
         pattern: "POST",
-        sound: "post.mp3"
+        sound: new Audio("sounds/post.mp3")
     },
     {
         pattern: "CORNER",
-        sound: "corner.mp3"
+        sound: new Audio("sounds/corner.mp3")
     },
     {
         pattern: "FLY",
-        sound: "fly.mp3"
+        sound: new Audio("sounds/fly.mp3")
     }
 ]
 
@@ -44,8 +44,8 @@ function drawNewPattern() {
         var newRoute = patterns[parseInt(Math.random() * 5)];
 
         document.getElementById("routeElement").innerText = newRoute.pattern;
-        var audioElement = new Audio('sounds/' + newRoute.sound);
-        audioElement.play();
+        
+        newRoute.sound.play();
     }
 }
 var countDownDate = new Date();
