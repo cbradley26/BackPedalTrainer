@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BackPedalling Training Tool</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <button id="startButton" onclick="start()">Start</button>
+    <button id="stopButton" disabled onclick="stop()">Stop</button>
+    <h1 id="routeElement"></h1>
+    <h2 id="timer"></h2>
+    <h3 id="instruction"></h3>
+
+    <h3>
+        
+        Instructions:
+        <ul>
+            <li>at 6s - start Back Pedalling;</li>
+            <li>at 3s - a route will be displayed - execute as if a receiver was running that route;</li>
+            <li>at 0s - get back to your original stance - start again;</li>
+        </ul>
+
+    </h3>
+</body>
+</html>
